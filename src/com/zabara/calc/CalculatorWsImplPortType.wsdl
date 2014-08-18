@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions targetNamespace="http://calc.zabara.com/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://calc.zabara.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://calc.zabara.com/" schemaLocation="CalculatorWsImplPortType_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="sum">
+    <part name="parameters" element="tns:sum"/>
+  </message>
+  <message name="sumResponse">
+    <part name="parameters" element="tns:sumResponse"/>
+  </message>
+  <message name="mult">
+    <part name="parameters" element="tns:mult"/>
+  </message>
+  <message name="multResponse">
+    <part name="parameters" element="tns:multResponse"/>
+  </message>
+  <portType name="CalculatorWsImpl">
+    <operation name="sum">
+      <input message="tns:sum"/>
+      <output message="tns:sumResponse"/>
+    </operation>
+    <operation name="mult">
+      <input message="tns:mult"/>
+      <output message="tns:multResponse"/>
+    </operation>
+  </portType>
+</definitions>
+
